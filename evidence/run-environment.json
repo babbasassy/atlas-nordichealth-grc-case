@@ -1,0 +1,14 @@
+{
+  "observed_at_utc": "2026-10-31T03:30:21.275530+00:00",
+  "python_version": "3.14.7",
+  "scope": "Local artifact consistency and validator regression tests, not implemented security controls",
+  "validation_exit_code": 0,
+  "unit_exit_code": 0,
+  "source_sha256": {
+    "scripts/validate.py": "cf1af95e875a7ce1d550257414b80673d8c76bbb0b9670dee185cbc92306d651",
+    "tests/test_validation.py": "f17e4f630c744adbdb1582691ac810f9308f62cb57d651dd6cdde5ad59962879",
+    "register.json": "8be4bd008f67ed1fc55f807d49f4001b46238ec05ea250990bb6d61af4eacccc",
+    "treatments.json": "04fffb440429ed90ea9913637f628333c65f69227f98fe95ef8625451a110e3a",
+    "controls.json": "83d9fd8f4e5728b4e0255ae22509982231e0949c4167f61927d7a33f732c31bd"
+  }
+}

@@ -1,0 +1,251 @@
+{
+  "kind": "fictional_risk_assessment",
+  "assessment_date": "2026-10-31",
+  "initial_draft_date": "2026-10-29",
+  "assumptions": [
+    "Invented organization and judgments; no observed organization or personal records",
+    "Supplier-hosted administrative services; no organization-operated datacenter",
+    "Staff laptops and supplier physical-security assurance remain in scope",
+    "Existing controls have not been verified; scores describe assumed current exposure, not measured residual risk"
+  ],
+  "assets": [
+    {
+      "id": "A01",
+      "name": "Identity service",
+      "owner_role": "IT operations lead",
+      "data_categories": [
+        "staff account identifiers",
+        "access roles"
+      ]
+    },
+    {
+      "id": "A02",
+      "name": "Appointment service",
+      "owner_role": "Administration lead",
+      "data_categories": [
+        "contact details",
+        "appointment metadata"
+      ]
+    },
+    {
+      "id": "A03",
+      "name": "Document store",
+      "owner_role": "Records lead",
+      "data_categories": [
+        "confidential administration documents"
+      ]
+    },
+    {
+      "id": "A04",
+      "name": "Partner API",
+      "owner_role": "Integration lead",
+      "data_categories": [
+        "appointment exchange messages"
+      ]
+    },
+    {
+      "id": "A05",
+      "name": "Staff laptops",
+      "owner_role": "IT operations lead",
+      "data_categories": [
+        "cached documents",
+        "session material"
+      ]
+    },
+    {
+      "id": "A06",
+      "name": "Backup service",
+      "owner_role": "IT operations lead",
+      "data_categories": [
+        "copies of service records"
+      ]
+    },
+    {
+      "id": "A07",
+      "name": "Support records",
+      "owner_role": "Service desk lead",
+      "data_categories": [
+        "support conversations",
+        "staff identifiers"
+      ]
+    },
+    {
+      "id": "A08",
+      "name": "Security audit records",
+      "owner_role": "Security lead",
+      "data_categories": [
+        "access events",
+        "administrative changes"
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "id": "R01",
+      "asset_ids": [
+        "A01",
+        "A03"
+      ],
+      "owner_role": "IT operations lead",
+      "scenario": "Stolen staff credentials permit access to confidential documents.",
+      "likelihood": 4,
+      "impact": 5,
+      "score": 20,
+      "band": "critical",
+      "rationale": "Routine external sign-in and document access create opportunities. Assume strong authentication and access review are not evidenced. Broad document disclosure is the severe scenario; actual access scope is unknown.",
+      "control_ids": [
+        "C01"
+      ],
+      "treatment_id": "T01",
+      "acceptance": "pending",
+      "actual_residual": null,
+      "escalation_required": true
+    },
+    {
+      "id": "R02",
+      "asset_ids": [
+        "A02",
+        "A06"
+      ],
+      "owner_role": "Administration lead",
+      "scenario": "Ransomware or destructive error interrupts scheduling and usable backups cannot be restored.",
+      "likelihood": 3,
+      "impact": 5,
+      "score": 15,
+      "band": "high",
+      "rationale": "Destructive error or ransomware is plausible. Assume recoverability and separation of backup administration are untested. Scheduling could remain unavailable without a usable restore path.",
+      "control_ids": [
+        "C02"
+      ],
+      "treatment_id": "T02",
+      "acceptance": "pending",
+      "actual_residual": null,
+      "escalation_required": true
+    },
+    {
+      "id": "R03",
+      "asset_ids": [
+        "A04",
+        "A02"
+      ],
+      "owner_role": "Integration lead",
+      "scenario": "An integration authorization error exposes another customer's appointment information.",
+      "likelihood": 3,
+      "impact": 5,
+      "score": 15,
+      "band": "high",
+      "rationale": "Multiple partner contexts make an authorization mistake plausible. An incorrect tenant/object check could disclose appointments across customers; scope of exposure has not been measured.",
+      "control_ids": [
+        "C03"
+      ],
+      "treatment_id": "T03",
+      "acceptance": "pending",
+      "actual_residual": null,
+      "escalation_required": true
+    },
+    {
+      "id": "R04",
+      "asset_ids": [
+        "A05"
+      ],
+      "owner_role": "IT operations lead",
+      "scenario": "A lost laptop exposes cached information or reusable sessions.",
+      "likelihood": 3,
+      "impact": 4,
+      "score": 12,
+      "band": "high",
+      "rationale": "Portable devices can be misplaced. Assume encryption and session handling are unverified. Cached documents or reusable sessions could cause serious disclosure.",
+      "control_ids": [
+        "C04"
+      ],
+      "treatment_id": "T04",
+      "acceptance": "pending",
+      "actual_residual": null,
+      "escalation_required": false
+    },
+    {
+      "id": "R05",
+      "asset_ids": [
+        "A02",
+        "A07"
+      ],
+      "owner_role": "Administration lead",
+      "scenario": "A supplier outage or poorly governed supplier access disrupts service and exposes support records.",
+      "likelihood": 3,
+      "impact": 4,
+      "score": 12,
+      "band": "high",
+      "rationale": "A supplier is a service and access dependency. Assume continuity obligations and privileged access boundaries have not been reviewed. Disruption and support-record disclosure are distinct impacts requiring review.",
+      "control_ids": [
+        "C05"
+      ],
+      "treatment_id": "T05",
+      "acceptance": "pending",
+      "actual_residual": null,
+      "escalation_required": false
+    },
+    {
+      "id": "R06",
+      "asset_ids": [
+        "A03",
+        "A07"
+      ],
+      "owner_role": "Records lead",
+      "scenario": "Unnecessary personal details are retained in documents and support cases without a reviewed deletion process.",
+      "likelihood": 4,
+      "impact": 4,
+      "score": 16,
+      "band": "high",
+      "rationale": "Routine copying into documents/support cases creates repeated opportunities for unnecessary retention. Accumulation can increase privacy harm and the scope of a later disclosure. No lawful retention duration is assumed.",
+      "control_ids": [
+        "C06"
+      ],
+      "treatment_id": "T06",
+      "acceptance": "pending",
+      "actual_residual": null,
+      "escalation_required": false
+    },
+    {
+      "id": "R07",
+      "asset_ids": [
+        "A05",
+        "A04"
+      ],
+      "owner_role": "IT operations lead",
+      "scenario": "An unaddressed software weakness enables unauthorized access to an administrative service.",
+      "likelihood": 3,
+      "impact": 4,
+      "score": 12,
+      "band": "high",
+      "rationale": "Exposed integrations and device software may contain weaknesses. Assume ownership and patch verification are not demonstrated. Unauthorized changes or access could affect several administrative services.",
+      "control_ids": [
+        "C07"
+      ],
+      "treatment_id": "T07",
+      "acceptance": "pending",
+      "actual_residual": null,
+      "escalation_required": false
+    },
+    {
+      "id": "R08",
+      "asset_ids": [
+        "A08",
+        "A01"
+      ],
+      "owner_role": "Security lead",
+      "scenario": "Missing or unreviewed security records delay detection and investigation of unauthorized access.",
+      "likelihood": 4,
+      "impact": 4,
+      "score": 16,
+      "band": "high",
+      "rationale": "Assume log coverage, retention and review are unverified. Undetected misuse could persist and evidence might be unavailable for investigation. This amplifies other risks; scores must not be summed as independent loss estimates.",
+      "control_ids": [
+        "C08"
+      ],
+      "treatment_id": "T08",
+      "acceptance": "pending",
+      "actual_residual": null,
+      "escalation_required": false
+    }
+  ]
+}

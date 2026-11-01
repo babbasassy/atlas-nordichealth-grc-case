@@ -1,0 +1,27 @@
+test_cli_valid_and_invalid_exit_with_saved_report (test_validation.FileAndCliTests.test_cli_valid_and_invalid_exit_with_saved_report) ... ok
+test_cli_will_not_overwrite_an_input (test_validation.FileAndCliTests.test_cli_will_not_overwrite_an_input) ... ok
+test_malformed_duplicate_and_nonstandard_json (test_validation.FileAndCliTests.test_malformed_duplicate_and_nonstandard_json) ... ok
+test_missing_input_is_named (test_validation.FileAndCliTests.test_missing_input_is_named) ... ok
+test_report_hashes_match_input_bytes (test_validation.FileAndCliTests.test_report_hashes_match_input_bytes) ... ok
+test_band_boundaries (test_validation.ValidationTests.test_band_boundaries) ... ok
+test_control_reciprocity_in_both_directions (test_validation.ValidationTests.test_control_reciprocity_in_both_directions) ... ok
+test_critical_score_escalates_with_impact_below_five (test_validation.ValidationTests.test_critical_score_escalates_with_impact_below_five) ... ok
+test_duplicate_identifiers_in_every_register (test_validation.ValidationTests.test_duplicate_identifiers_in_every_register) ... ok
+test_duplicate_reference (test_validation.ValidationTests.test_duplicate_reference) ... ok
+test_exclusion_requires_reason_and_no_risk_links (test_validation.ValidationTests.test_exclusion_requires_reason_and_no_risk_links) ... ok
+test_false_completion_acceptance_and_residual_claims (test_validation.ValidationTests.test_false_completion_acceptance_and_residual_claims) ... ok
+test_impact_five_escalates_even_with_moderate_product (test_validation.ValidationTests.test_impact_five_escalates_even_with_moderate_product) ... ok
+test_missing_escalation_flag_is_rejected (test_validation.ValidationTests.test_missing_escalation_flag_is_rejected) ... ok
+test_missing_nullable_field_and_wrong_applicability_type (test_validation.ValidationTests.test_missing_nullable_field_and_wrong_applicability_type) ... ok
+test_numeric_types_and_ranges (test_validation.ValidationTests.test_numeric_types_and_ranges) ... ok
+test_orphan_treatment_is_rejected (test_validation.ValidationTests.test_orphan_treatment_is_rejected) ... ok
+test_risk_and_treatment_control_sets_must_match (test_validation.ValidationTests.test_risk_and_treatment_control_sets_must_match) ... ok
+test_score_and_band_are_recalculated (test_validation.ValidationTests.test_score_and_band_are_recalculated) ... ok
+test_structurally_malformed_input_returns_errors (test_validation.ValidationTests.test_structurally_malformed_input_returns_errors) ... ok
+test_unknown_references (test_validation.ValidationTests.test_unknown_references) ... ok
+test_valid_baseline_and_no_mutation (test_validation.ValidationTests.test_valid_baseline_and_no_mutation) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.570s
+
+OK

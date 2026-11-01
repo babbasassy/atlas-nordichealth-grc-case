@@ -1,0 +1,125 @@
+{
+  "kind": "fictional_proposed_treatments",
+  "treatments": [
+    {
+      "id": "T01",
+      "risk_id": "R01",
+      "control_ids": [
+        "C01"
+      ],
+      "status": "proposed",
+      "review_window_days": 7,
+      "action": "Review authentication strength, recovery paths, access scope and privileged roles.",
+      "required_evidence": [
+        "Scoped policy export, test sign-in outcomes, role-review record and recovery-path test; validate all relevant identities, not a single example."
+      ],
+      "implementation_evidence": [],
+      "approval": "pending"
+    },
+    {
+      "id": "T02",
+      "risk_id": "R02",
+      "control_ids": [
+        "C02"
+      ],
+      "status": "proposed",
+      "review_window_days": 7,
+      "action": "Separate backup administration and define service recovery needs with the service owner.",
+      "required_evidence": [
+        "Restore an isolated representative backup, record recovered completeness and elapsed recovery against approved needs; assess dependencies and backup access separately."
+      ],
+      "implementation_evidence": [],
+      "approval": "pending"
+    },
+    {
+      "id": "T03",
+      "risk_id": "R03",
+      "control_ids": [
+        "C03"
+      ],
+      "status": "proposed",
+      "review_window_days": 7,
+      "action": "Specify object/customer authorization and test positive and cross-customer negative cases.",
+      "required_evidence": [
+        "Reproducible request/response evidence with synthetic identities; every relevant API operation covered or explicitly listed as untested."
+      ],
+      "implementation_evidence": [],
+      "approval": "pending"
+    },
+    {
+      "id": "T04",
+      "risk_id": "R04",
+      "control_ids": [
+        "C04"
+      ],
+      "status": "proposed",
+      "review_window_days": 30,
+      "action": "Establish device inventory, encryption evidence and lost-device/session procedure.",
+      "required_evidence": [
+        "Inventory coverage, encryption/recovery-key governance and a safe revocation exercise; no claim based only on a written policy."
+      ],
+      "implementation_evidence": [],
+      "approval": "pending"
+    },
+    {
+      "id": "T05",
+      "risk_id": "R05",
+      "control_ids": [
+        "C05"
+      ],
+      "status": "proposed",
+      "review_window_days": 30,
+      "action": "Review supplier roles, access scope, service recovery and exit arrangements.",
+      "required_evidence": [
+        "Reviewed responsibilities, access evidence, supplier assurance limitations and a tabletop dependency test. No contract or service commitment is signed by this exercise."
+      ],
+      "implementation_evidence": [],
+      "approval": "pending"
+    },
+    {
+      "id": "T06",
+      "risk_id": "R06",
+      "control_ids": [
+        "C06"
+      ],
+      "status": "proposed",
+      "review_window_days": 30,
+      "action": "Map purpose and data categories; obtain a reasoned retention/deletion decision and assess privacy risks.",
+      "required_evidence": [
+        "Approved rationale, legal/privacy review where needed, synthetic deletion and restore-handling test, and evidence of exceptions. A deletion job alone does not establish lawful processing."
+      ],
+      "implementation_evidence": [],
+      "approval": "pending"
+    },
+    {
+      "id": "T07",
+      "risk_id": "R07",
+      "control_ids": [
+        "C07"
+      ],
+      "status": "proposed",
+      "review_window_days": 30,
+      "action": "Inventory versions, prioritize applicable weaknesses and verify remediation.",
+      "required_evidence": [
+        "Scoped scan/version evidence before and after, applicability rationale, supported-version checks and time-limited exception decisions."
+      ],
+      "implementation_evidence": [],
+      "approval": "pending"
+    },
+    {
+      "id": "T08",
+      "risk_id": "R08",
+      "control_ids": [
+        "C08"
+      ],
+      "status": "proposed",
+      "review_window_days": 30,
+      "action": "Define audit sources, access, retention, alert ownership and investigation workflow.",
+      "required_evidence": [
+        "Synthetic test events traced from source to review, failure/missing-source checks and an incident exercise; do not infer business coverage from the separate ATLAS Wazuh lab."
+      ],
+      "implementation_evidence": [],
+      "approval": "pending"
+    }
+  ]
+}

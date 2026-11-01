@@ -1,0 +1,106 @@
+{
+  "kind": "fictional_proposed_controls",
+  "coverage": "illustrative_subset_not_full_iso_annex_a",
+  "controls": [
+    {
+      "id": "C01",
+      "name": "Authentication, recovery and privileged access review",
+      "applicable": true,
+      "reason": "The invented identity service grants access to confidential documents. Authentication, recovery paths and privilege scope need review across the in-scope identities to address credential misuse.",
+      "risk_ids": ["R01"],
+      "nsm_principles": ["2.6"],
+      "status": "proposed",
+      "evidence_status": "not_implemented"
+    },
+    {
+      "id": "C02",
+      "name": "Separated backup administration and recovery exercise",
+      "applicable": true,
+      "reason": "The fictional appointment service depends on recoverable records. Separate backup administration and a representative restore exercise are needed to assess recovery against service-owner requirements and dependencies.",
+      "risk_ids": ["R02"],
+      "nsm_principles": ["2.9", "4.1"],
+      "status": "proposed",
+      "evidence_status": "not_implemented"
+    },
+    {
+      "id": "C03",
+      "name": "Partner authorization tests and exchange boundaries",
+      "applicable": true,
+      "reason": "The assumed partner API exchanges appointment information across customer contexts. Operation-level authorization checks and restricted flows are needed to prevent cross-customer access, using synthetic positive and negative tests.",
+      "risk_ids": ["R03"],
+      "nsm_principles": ["2.1", "2.5"],
+      "status": "proposed",
+      "evidence_status": "not_implemented"
+    },
+    {
+      "id": "C04",
+      "name": "Laptop custody, encryption and lost-device response",
+      "applicable": true,
+      "reason": "Staff laptops remain in scope despite assumed supplier hosting. Device inventory, physical custody and secure storage, encryption and recovery-key governance, and session revocation need review because a lost device can expose cached documents or reusable sessions.",
+      "risk_ids": ["R04"],
+      "nsm_principles": ["1.2", "2.6", "2.7"],
+      "status": "proposed",
+      "evidence_status": "not_implemented"
+    },
+    {
+      "id": "C05",
+      "name": "Supplier responsibilities, access and continuity review",
+      "applicable": true,
+      "reason": "The fictional services and service desk depend on suppliers. Review access, service dependencies, recovery and exit arrangements, and evidence of supplier physical safeguards; supplier hosting does not remove these review responsibilities.",
+      "risk_ids": ["R05"],
+      "nsm_principles": ["1.1", "2.1", "4.1"],
+      "status": "proposed",
+      "evidence_status": "not_implemented"
+    },
+    {
+      "id": "C06",
+      "name": "Purpose, retention and deletion review",
+      "applicable": true,
+      "reason": "Documents and support cases could accumulate unnecessary personal details in the scenario. Map purpose, data flows and copies; obtain reviewed retention and deletion decisions, including exceptions and restored backups. This security mapping does not establish a lawful basis or privacy compliance.",
+      "risk_ids": ["R06"],
+      "nsm_principles": ["1.1", "2.5"],
+      "status": "proposed",
+      "evidence_status": "not_implemented"
+    },
+    {
+      "id": "C07",
+      "name": "Weakness ownership and remediation verification",
+      "applicable": true,
+      "reason": "The assumed laptops and partner API require owners for applicable software weaknesses, prioritization, safe changes and verification. Version and remediation evidence is needed before claiming that exposure has reduced.",
+      "risk_ids": ["R07"],
+      "nsm_principles": ["3.1", "2.10"],
+      "status": "proposed",
+      "evidence_status": "not_implemented"
+    },
+    {
+      "id": "C08",
+      "name": "Audit coverage, alert review and incident exercise",
+      "applicable": true,
+      "reason": "The scenario needs evidence that relevant access and administrative events reach an accountable reviewer and support incident classification. Define proportionate log content, access and retention; test missing sources and an incident workflow. A separate ATLAS lab does not demonstrate this coverage.",
+      "risk_ids": ["R08"],
+      "nsm_principles": ["3.2", "3.3", "4.2"],
+      "status": "proposed",
+      "evidence_status": "not_implemented"
+    },
+    {
+      "id": "C09",
+      "name": "Industrial and operational-technology safeguards",
+      "applicable": false,
+      "reason": "The fictional scope covers administrative information services and explicitly excludes industrial processes, operational technology and medical devices. No such assets or operating responsibility are assumed in this case, so an industrial/OT-specific control set has no direct implementation target. This does not assess risks in those excluded services or remove administrative-service dependency reviews. Reopen applicability before adding an OT asset, interface or responsibility.",
+      "risk_ids": [],
+      "nsm_principles": [],
+      "status": "not_applicable",
+      "evidence_status": "not_applicable"
+    },
+    {
+      "id": "C10",
+      "name": "Organization-operated datacenter physical safeguards",
+      "applicable": false,
+      "reason": "This fictional case assumes supplier-hosted services and no organization-operated datacenter, server room or associated facility plant. Direct operation of datacenter access, power and environmental safeguards is therefore outside the case boundary. Supplier physical-security assurance remains applicable under C05, and staff-device custody, secure storage and other physical protections remain applicable under C04. Reopen applicability if organization-operated hosting or premises responsibilities are introduced; supplier hosting alone is not evidence that physical risks are controlled.",
+      "risk_ids": [],
+      "nsm_principles": [],
+      "status": "not_applicable",
+      "evidence_status": "not_applicable"
+    }
+  ]
+}

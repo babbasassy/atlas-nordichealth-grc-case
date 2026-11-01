@@ -1,0 +1,27 @@
+{
+  "status": "draft_not_assessed",
+  "data_kind": "fictional_case_design_not_observed_organization",
+  "created_on": "2026-10-29",
+  "assets": [
+    {"id":"A01","name":"Identity service","owner_role":"IT operations lead","data_categories":["staff account identifiers","access roles"]},
+    {"id":"A02","name":"Appointment service","owner_role":"Administration lead","data_categories":["contact details","appointment metadata"]},
+    {"id":"A03","name":"Document store","owner_role":"Records lead","data_categories":["confidential administration documents"]},
+    {"id":"A04","name":"Partner API","owner_role":"Integration lead","data_categories":["appointment exchange messages"]},
+    {"id":"A05","name":"Staff laptops","owner_role":"IT operations lead","data_categories":["cached documents","session material"]},
+    {"id":"A06","name":"Backup service","owner_role":"IT operations lead","data_categories":["copies of service records"]},
+    {"id":"A07","name":"Support records","owner_role":"Service desk lead","data_categories":["support conversations","staff identifiers"]},
+    {"id":"A08","name":"Security audit records","owner_role":"Security lead","data_categories":["access events","administrative changes"]}
+  ],
+  "risk_seeds": [
+    {"id":"R01","asset_ids":["A01","A03"],"scenario":"Stolen staff credentials permit access to confidential documents.","proposed_control_topics":["strong authentication","privileged access review"],"nsm_principles":["2.6"],"acceptance":"pending"},
+    {"id":"R02","asset_ids":["A02","A06"],"scenario":"Ransomware or destructive error interrupts scheduling and usable backups cannot be restored.","proposed_control_topics":["separate backup administration","restore exercises"],"nsm_principles":["2.9","4.1"],"acceptance":"pending"},
+    {"id":"R03","asset_ids":["A04","A02"],"scenario":"An integration authorization error exposes another customer's appointment information.","proposed_control_topics":["authorization tests","data flow restrictions"],"nsm_principles":["2.1","2.5"],"acceptance":"pending"},
+    {"id":"R04","asset_ids":["A05"],"scenario":"A lost laptop exposes cached information or reusable sessions.","proposed_control_topics":["device inventory","disk protection","session revocation"],"nsm_principles":["1.2","2.6","2.7"],"acceptance":"pending"},
+    {"id":"R05","asset_ids":["A02","A07"],"scenario":"A supplier outage or poorly governed supplier access disrupts service and exposes support records.","proposed_control_topics":["supplier responsibility review","continuity arrangements"],"nsm_principles":["1.1","2.1","4.1"],"acceptance":"pending"},
+    {"id":"R06","asset_ids":["A03","A07"],"scenario":"Unnecessary personal details are retained in documents and support cases without a reviewed deletion process.","proposed_control_topics":["data inventory","purpose and retention review","deletion evidence"],"nsm_principles":["1.1","2.5"],"acceptance":"pending"},
+    {"id":"R07","asset_ids":["A05","A04"],"scenario":"An unaddressed software weakness enables unauthorized access to an administrative service.","proposed_control_topics":["vulnerability ownership","prioritized patch verification"],"nsm_principles":["3.1","2.10"],"acceptance":"pending"},
+    {"id":"R08","asset_ids":["A08","A01"],"scenario":"Missing or unreviewed security records delay detection and investigation of unauthorized access.","proposed_control_topics":["log coverage review","alert triage","incident exercise"],"nsm_principles":["3.2","3.3","4.2"],"acceptance":"pending"}
+  ],
+  "ratings": "Not assigned yet; require documented rationale before scoring.",
+  "implementation_evidence": "None; proposed control topics are not implemented controls."
+}

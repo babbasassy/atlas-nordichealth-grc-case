@@ -1,0 +1,27 @@
+{
+  "timestamp_utc": "2026-10-31T03:30:20+00:00",
+  "scope": "artifact consistency not control effectiveness",
+  "root": "atlas-nordichealth-grc-case",
+  "inputs": [
+    {
+      "file": "register.json",
+      "sha256": "8be4bd008f67ed1fc55f807d49f4001b46238ec05ea250990bb6d61af4eacccc"
+    },
+    {
+      "file": "treatments.json",
+      "sha256": "04fffb440429ed90ea9913637f628333c65f69227f98fe95ef8625451a110e3a"
+    },
+    {
+      "file": "controls.json",
+      "sha256": "83d9fd8f4e5728b4e0255ae22509982231e0949c4167f61927d7a33f732c31bd"
+    }
+  ],
+  "counts": {
+    "assets": 8,
+    "risks": 8,
+    "treatments": 8,
+    "controls": 10
+  },
+  "valid": true,
+  "errors": []
+}
